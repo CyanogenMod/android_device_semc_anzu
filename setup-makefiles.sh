@@ -118,10 +118,10 @@ vendor/__VENDOR__/__DEVICE__/proprietary/softap_firmware.bin:system/etc/wifi/sof
 ## Adreno 200 files
 PRODUCT_COPY_FILES += \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libgsl.so:system/lib/libgsl.so \\
-vendor/__VENDOR__/__DEVICE__/proprietary/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \\
-vendor/__VENDOR__/__DEVICE__/proprietary/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \\
-vendor/__VENDOR__/__DEVICE__/proprietary/egl/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \\
-vendor/__VENDOR__/__DEVICE__/proprietary/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so 
+vendor/__VENDOR__/__DEVICE__/proprietary/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so
 
 ## Other libraries and proprietary binaries
 PRODUCT_COPY_FILES += \\
