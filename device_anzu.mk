@@ -36,8 +36,6 @@ PRODUCT_PACKAGES += \
 
 DISABLE_DEXPREOPT := false
 
-PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/device/semc/common/prelink-linux-arm-2G.map
-
 # These is the hardware-specific overlay, which points to the location
 # of hardware-specific resource overrides, typically the frameworks and
 # application settings that are stored in resourced.
