@@ -78,6 +78,7 @@ vendor/__VENDOR__/__DEVICE__/proprietary/libwmsts.so:system/lib/libwmsts.so
 PRODUCT_COPY_FILES += \\
 vendor/__VENDOR__/__DEVICE__/proprietary/liboemcamera.so:system/lib/liboemcamera.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libcamera.so:system/lib/libcamera.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libmmipl.so:system/lib/libmmipl.so 
 
@@ -109,7 +110,7 @@ vendor/__VENDOR__/__DEVICE__/proprietary/hciattach:system/bin/hciattach \\
 vendor/__VENDOR__/__DEVICE__/proprietary/init.qcom.bt.sh:system/etc/init.bt.sh \\
 vendor/__VENDOR__/__DEVICE__/proprietary/tiwlan.ini:system/etc/wifi/tiwlan.ini \\
 vendor/__VENDOR__/__DEVICE__/proprietary/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \\
-vendor/__VENDOR__/__DEVICE__/proprietary/softap/hostapd.conf:system/etc/wifi/softap/hostapd.conf \\
+vendor/__VENDOR__/__DEVICE__/proprietary/hostapd.conf:system/etc/wifi/softap/hostapd.conf \\
 vendor/__VENDOR__/__DEVICE__/proprietary/tiwlan_firmware.bin:system/etc/wifi/tiwlan_firmware.bin \\
 vendor/__VENDOR__/__DEVICE__/proprietary/tiwlan_ap.ini:system/etc/wifi/softap/tiwlan_ap.ini \\
 vendor/__VENDOR__/__DEVICE__/proprietary/softap_firmware.bin:system/etc/wifi/softap/tiwlan_firmware_ap.bin 
