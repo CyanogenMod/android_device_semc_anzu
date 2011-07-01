@@ -44,7 +44,7 @@ PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/device/semc/common/preli
 DEVICE_PACKAGE_OVERLAYS := device/semc/anzu/overlay
 
 # These are the hardware-specific configuration files
-PRODUCT_COPY_FILES := \
+PRODUCT_COPY_FILES += \
 	device/semc/anzu/prebuilt/media_profiles.xml:system/etc/media_profiles.xml \
 	device/semc/anzu/prebuilt/gps.conf:system/etc/gps.conf 
 
