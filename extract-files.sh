@@ -56,13 +56,12 @@ adb pull /system/lib/libwms.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libwmsts.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 ## Camera proprietaries
-adb pull /system/liboemcamera.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/liboemcamera.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libmmjpeg.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libmmipl.so ../../../vendor/$VENDOR/$DEVICE/proprietary 
-adb pull /system/libcamera.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libcamera.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 ## FIRMWARE
-PRODUCT_COPY_FILES += \
 adb pull /system/etc/firmware/bq27520_fw-0501_filever-0105_proj-hall_golden.bqfs ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/etc/firmware/bq27520_fw-0501_filever-0105_proj-hall_golden.dffs ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/etc/firmware/fm_rx_init_1273.1.bts ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -95,7 +94,7 @@ adb pull /system/etc/wifi/softap/tiwlan_ap.ini ../../../vendor/$VENDOR/$DEVICE/p
 adb pull /system/etc/wifi/softap/softap_firmware.bin ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 ## Adreno 200 files
-adb pull /system/lib/libgsl.so ../../../vendor/$VENDOR/$DEVICE/proprietarysystem/lib/libgsl.so \
+adb pull /system/lib/libgsl.so ../../../vendor/$VENDOR/$DEVICE/proprietarysystem/lib/libgsl.so
 adb pull /system/lib/egl/libGLESv1_CM_adreno200.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/egl/libq3dtools_adreno200.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/egl/libEGL_adreno200.so ../../../vendor/$VENDOR/$DEVICE/proprietary
