@@ -28,7 +28,6 @@ PRODUCT_PACKAGES += \
     liboverlay \
     gps.semc \
     lights.semc \
-    libaudio \
     libOmxCore \
     libOmxVenc \
     libOmxVdec \
