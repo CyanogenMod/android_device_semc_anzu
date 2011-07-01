@@ -60,6 +60,10 @@ adb pull /system/lib/liboemcamera.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libmmjpeg.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libmmipl.so ../../../vendor/$VENDOR/$DEVICE/proprietary 
 adb pull /system/lib/libcamera.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libcamera_clientsemc.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libcald_api.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libcald_pal.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libopencore_common.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 ## FIRMWARE
 adb pull /system/etc/firmware/bq27520_fw-0501_filever-0105_proj-hall_golden.bqfs ../../../vendor/$VENDOR/$DEVICE/proprietary
