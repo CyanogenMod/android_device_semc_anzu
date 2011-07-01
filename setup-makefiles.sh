@@ -75,9 +75,9 @@ vendor/__VENDOR__/__DEVICE__/proprietary/libwms.so:system/lib/libwms.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libwmsts.so:system/lib/libwmsts.so
 
 ## Camera proprietaries
-#PRODUCT_COPY_FILES += \\
+PRODUCT_COPY_FILES += \\
 vendor/__VENDOR__/__DEVICE__/proprietary/liboemcamera.so:system/lib/liboemcamera.so \\
-vendor/__VENDOR__/__DEVICE__/proprietary/libcamera.so:system/lib/libcamera.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libmmipl.so:system/lib/libmmipl.so 
 
