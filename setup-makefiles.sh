@@ -130,7 +130,7 @@ vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:system/lib/libaudioalsa
 vendor/__VENDOR__/__DEVICE__/proprietary/als_curve.conf:system/etc/als_curve.conf \\
 vendor/__VENDOR__/__DEVICE__/proprietary/vold.fstab:system/etc/vold.fstab \\
 vendor/__VENDOR__/__DEVICE__/proprietary/sensors.conf:system/etc/sensors.conf \\
-vendor/__VENDOR__/__DEVICE__/proprietary/hw/sensors.default.so:system/lib/hw/sensors.semc.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/sensors.default.so:system/lib/hw/sensors.semc.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/bq275xx_fwloader:system/bin/bq275xx_fwloader \\
 vendor/__VENDOR__/__DEVICE__/proprietary/hdmid:system/bin/hdmid \\
 vendor/__VENDOR__/__DEVICE__/proprietary/akmd8975:system/bin/akmd8975 \\
