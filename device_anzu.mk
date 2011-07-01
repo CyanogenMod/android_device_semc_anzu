@@ -23,7 +23,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     librs_jni \
-    gralloc.7x30 \
+    gralloc.msm7x30 \
     overlay.default \
     liboverlay \
     gps.semc \
