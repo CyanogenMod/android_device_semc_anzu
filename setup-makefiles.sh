@@ -139,7 +139,7 @@ vendor/__VENDOR__/__DEVICE__/proprietary/touchd:system/bin/touchd
 #offline charging animation
 PRODUCT_COPY_FILES += \\
 vendor/__VENDOR__/__DEVICE__/proprietary/chargemon:system/bin/chargemon \\
-vendor/__VENDOR__/__DEVICE__/proprietary/libmiscta.so:system/lib/libmiscta.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libmiscta.so:system/lib/libmiscta.so
 
 #Temporary GPS Fix untill we have 50001 gps
 PRODUCT_COPY_FILES += \\
