@@ -124,7 +124,7 @@ vendor/__VENDOR__/__DEVICE__/proprietary/egl/libGLESv2_adreno200.so:system/lib/e
 
 ## Other libraries and proprietary binaries
 PRODUCT_COPY_FILES += \\
-vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:obj/lib/libaudioalsa.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:out/target/product/anzu/obj/lib/libaudioalsa.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:system/lib/libaudioalsa.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/als_curve.conf:system/etc/als_curve.conf \\
 vendor/__VENDOR__/__DEVICE__/proprietary/vold.fstab:system/etc/vold.fstab \\
