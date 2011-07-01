@@ -41,7 +41,7 @@ PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/device/semc/common/preli
 # These is the hardware-specific overlay, which points to the location
 # of hardware-specific resource overrides, typically the frameworks and
 # application settings that are stored in resourced.
-DEVICE_PACKAGE_OVERLAYS := device/semc/anzu/overlay
+DEVICE_PACKAGE_OVERLAYS += device/semc/anzu/overlay
 
 # These are the hardware-specific configuration files
 PRODUCT_COPY_FILES += \
