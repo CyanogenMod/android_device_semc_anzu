@@ -94,7 +94,7 @@ adb pull /system/etc/wifi/softap/tiwlan_ap.ini ../../../vendor/$VENDOR/$DEVICE/p
 adb pull /system/etc/wifi/softap/softap_firmware.bin ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 ## Adreno 200 files
-adb pull /system/lib/libgsl.so ../../../vendor/$VENDOR/$DEVICE/proprietarysystem/lib/libgsl.so
+adb pull /system/lib/libgsl.so ../../../vendor/$VENDOR/$DEVICE/proprietary/libgsl.so
 adb pull /system/lib/egl/libGLESv1_CM_adreno200.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/egl/libq3dtools_adreno200.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/egl/libEGL_adreno200.so ../../../vendor/$VENDOR/$DEVICE/proprietary
