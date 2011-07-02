@@ -53,7 +53,6 @@ PRODUCT_COPY_FILES += \
     device/semc/anzu/recovery.fstab:root/etcrec/recovery.fstab \
     device/semc/anzu/prebuilt/hw_config.sh:system/etc/hw_config.sh \
     device/semc/anzu/prebuilt/bootrec:root/sbin/bootrec 
-#    device/semc/anzu/prebuilt/init.rc:root/init.rc \
 
 
 #Recovery TEST Files
@@ -96,7 +95,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.gprsclass=10 \
     ro.telephony.default_network=0 \
     ro.telephony.call_ring.multiple=false \
-    wifi.interface=wlan0 \
+    wifi.interface=tiwlan0 \
     wifi.supplicant_scan_interval=15 \
     ro.sf.lcd_density=240 \
     ro.sf.hwrotation=180 \
