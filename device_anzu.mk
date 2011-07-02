@@ -22,6 +22,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 PRODUCT_PACKAGES += \
+    hostap \
     librs_jni \
     gralloc.msm7x30 \
     overlay.default \
