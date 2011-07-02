@@ -145,9 +145,9 @@ service hostapd /system/bin/hostap /data/misc/wifi/hostapd/hostapd.conf
     disabled
     oneshot
 
-service ifcfg_tiap /system/bin/ifconfig tiap 192.168.43.1 netmask 255.255.255.0
-    disabled
-    oneshot
+#service ifcfg_tiap /system/bin/ifconfig tiap 192.168.43.1 netmask 255.255.255.0
+#    disabled
+#    oneshot
 
 service port-bridge /system/bin/port-bridge /dev/smd0 /dev/ttyGS0 &
     disabled
