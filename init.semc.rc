@@ -118,7 +118,7 @@ service ifcfg_tiwlan /system/bin/ifconfig tiwlan0 up
     disabled
     oneshot
 
-service wpa_supplicant /system/bin/wpa_supplicant -Dwlan0 -itiwlan0 -c/data/misc/wifi/wpa_supplicant.conf -dd
+service wpa_supplicant /system/bin/wpa_supplicant -Dtiwlan0 -itiwlan0 -c/data/misc/wifi/wpa_supplicant.conf -dd
     socket wpa_tiwlan0 dgram 660 wifi wifi
     disabled
     oneshot
