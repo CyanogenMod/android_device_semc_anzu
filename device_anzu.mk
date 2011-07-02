@@ -59,8 +59,10 @@ PRODUCT_COPY_FILES += \
 #Recovery TEST Files
 PRODUCT_COPY_FILES += \
 
-#WIFI modules
+#WIFI modules and configs
 PRODUCT_COPY_FILES += \
+    device/semc/anzu/prebuilt/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    device/semc/anzu/prebuilt/hostapd.conf:system/etc/wifi/softap/hostapd.conf \
     device/semc/anzu/modules/sdio.ko:system/lib/modules/sdio.ko \
     device/semc/anzu/modules/tiap_drv.ko:system/lib/modules/tiap_drv.ko \
     device/semc/anzu/modules/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko
