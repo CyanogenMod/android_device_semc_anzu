@@ -48,7 +48,7 @@ PRODUCT_COPY_FILES += \
 
 # Init files
 PRODUCT_COPY_FILES += \
-    device/semc/anzu/init.semc.rc:root/init.semc.rc \
+    device/semc/anzu/prebuilt/init.semc.rc:root/init.semc.rc \
     device/semc/anzu/ueventd.mogami.rc:root/ueventd.mogami.rc \
     device/semc/anzu/recovery.fstab:root/etcrec/recovery.fstab \
     device/semc/anzu/prebuilt/hw_config.sh:system/etc/hw_config.sh \
