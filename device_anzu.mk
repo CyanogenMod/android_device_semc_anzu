@@ -26,7 +26,6 @@ PRODUCT_PACKAGES += \
     librs_jni \
     gralloc.msm7x30 \
     overlay.default \
-    liboverlay \
     gps.semc \
     lights.semc \
     libOmxCore \
@@ -57,7 +56,7 @@ PRODUCT_COPY_FILES += \
 
 
 #Recovery TEST Files
-PRODUCT_COPY_FILES += \
+# PRODUCT_COPY_FILES += \
 
 #WIFI modules and configs
 PRODUCT_COPY_FILES += \
@@ -120,5 +119,3 @@ PRODUCT_LOCALES += hdpi
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
-
-
