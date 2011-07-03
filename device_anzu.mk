@@ -52,6 +52,7 @@ PRODUCT_COPY_FILES += \
     device/semc/anzu/ueventd.mogami.rc:root/ueventd.mogami.rc \
     device/semc/anzu/recovery.fstab:root/etcrec/recovery.fstab \
     device/semc/anzu/prebuilt/hw_config.sh:system/etc/hw_config.sh \
+    device/semc/anzu/prebuilt/logo.rle:root/logo.rle \
     device/semc/anzu/prebuilt/bootrec:root/sbin/bootrec 
 
 
