@@ -26,6 +26,7 @@ PRODUCT_PACKAGES += \
     librs_jni \
     gralloc.msm7x30 \
     overlay.default \
+    screencap \
     gps.semc \
     lights.semc \
     libOmxCore \
