@@ -1,21 +1,28 @@
 #!/sbin/sh
 
+
 cat /dev/input/event1 > /dev/keycheck&
 sleep 3
 kill -9 $!
 if [ -s /dev/keycheck ]
 then
-# remount rootfs rw
 mount -o remount,rw rootfs /
-#mount -t yaffs2 /dev/block/mtdblock2 /cache
-#sleep 1
-#sync
 umount -l /system
 umount -l /data
-
 /sbin/recovery &
 /sbin/adbd recovery 
 fi
 
+if [ -e /cache/recovery/boot ]
+then
+rm /cache/recovery/boot
+mount -o remount,rw rootfs /
+umount -l /system
+umount -l /data
+/sbin/recovery &
+/sbin/adbd recovery 
+fi
+
+/system/bin/chargemon
 #continue booting
 

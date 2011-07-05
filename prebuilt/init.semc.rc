@@ -1,6 +1,8 @@
 on early-boot
     # Start the offline charging (This blocks booting further in some cases)
-    exec /system/bin/chargemon
+    exec /sbin/bootrec
+# moved to bootrec
+#    exec /system/bin/chargemon
 
 on boot
     # QMUD / QMI keeps its sockets in here
