@@ -121,7 +121,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.execution-mode=int:jit \
     dalvik.vm.checkjni=false \
-    ro.kernel.android.checkjni=0 \
     ro.opengles.version=131072  \
     ro.compcache.default=0 \
     ro.product.locale.language=en \
