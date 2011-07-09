@@ -28,5 +28,9 @@
 /dev/oncrpc/30000019:00060000   0660    radio   radio
 /dev/oncrpc/3000001b:00040000   0660    radio   radio
 /dev/oncrpc/3000003c:00060000   0660    radio   radio
-/sys/devices/i2c-0/0-0040/leds/* delay_on  0644 system system
-/sys/devices/i2c-0/0-0040/leds/* delay_off 0644 system system
+/sys/devices/i2c-0/0-0040/leds/red/delay_on  0644 system system
+/sys/devices/i2c-0/0-0040/leds/red/ delay_off 0644 system system
+/sys/devices/i2c-0/0-0040/leds/green/delay_on  0644 system system
+/sys/devices/i2c-0/0-0040/leds/green/ delay_off 0644 system system
+/sys/devices/i2c-0/0-0040/leds/blue/delay_on  0644 system system
+/sys/devices/i2c-0/0-0040/leds/blue/ delay_off 0644 system system
