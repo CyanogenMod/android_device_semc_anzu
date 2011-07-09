@@ -7,10 +7,10 @@ kill -9 $!
 if [ -s /dev/keycheck ]
 then
 mount -o remount,rw rootfs /
-umount -l /system
-umount -l /data
-umount -l /cache
-umount -l /mnt/sdcard
+umount /system
+umount /data
+umount /cache
+umount /mnt/sdcard
 rm -r /sdcard
 rm -r /not/sdcard
 mkdir /sdcard
@@ -24,10 +24,10 @@ if [ -e /cache/recovery/boot ]
 then
 rm /cache/recovery/boot
 mount -o remount,rw rootfs /
-umount -l /system
-umount -l /data
-umount -l /cache
-umount -l /mnt/sdcard
+umount /system
+umount /data
+umount /cache
+umount /mnt/sdcard
 rm -r /sdcard
 rm -r /not/sdcard
 mkdir /sdcard
