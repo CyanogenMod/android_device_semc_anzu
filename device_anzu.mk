@@ -11,29 +11,19 @@ PRODUCT_NAME := anzu
 PRODUCT_DEVICE := anzu
 PRODUCT_MODEL := anzu
 
-
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/semc/anzu/kernel
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
+-include device/semc/msm7x30-common/msm7x30.mk
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 PRODUCT_PACKAGES += \
-    hostap \
-    librs_jni \
-    gralloc.msm7x30 \
-    overlay.default \
-    screencap \
-    gps.semc \
-    lights.semc \
-    libOmxCore \
-    libOmxVenc \
-    libOmxVdec \
-    com.android.future.usb.accessory
-
+    hostap
 
 DISABLE_DEXPREOPT := false
 
@@ -44,8 +34,7 @@ DEVICE_PACKAGE_OVERLAYS += device/semc/anzu/overlay
 
 # These are the hardware-specific configuration files
 PRODUCT_COPY_FILES += \
-	device/semc/anzu/prebuilt/media_profiles.xml:system/etc/media_profiles.xml \
-	device/semc/anzu/prebuilt/gps.conf:system/etc/gps.conf 
+	device/semc/anzu/prebuilt/media_profiles.xml:system/etc/media_profiles.xml
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -79,29 +68,6 @@ PRODUCT_COPY_FILES += \
     device/semc/anzu/modules/tiap_drv.ko:system/lib/modules/tiap_drv.ko \
     device/semc/anzu/modules/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko
 
-PRODUCT_COPY_FILES += \
-    frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
-    frameworks/base/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
-    frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
-    frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
-    frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
-    frameworks/base/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml \
-    frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
-    frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
-
-#offline charging animation
-PRODUCT_COPY_FILES += \
-    device/semc/anzu/prebuilt/animations/charging_animation_01.png:system/semc/chargemon/data/charging_animation_01.png \
-    device/semc/anzu/prebuilt/animations/charging_animation_02.png:system/semc/chargemon/data/charging_animation_02.png \
-    device/semc/anzu/prebuilt/animations/charging_animation_03.png:system/semc/chargemon/data/charging_animation_03.png \
-    device/semc/anzu/prebuilt/animations/charging_animation_04.png:system/semc/chargemon/data/charging_animation_04.png \
-    device/semc/anzu/prebuilt/animations/charging_animation_05.png:system/semc/chargemon/data/charging_animation_05.png \
-    device/semc/anzu/prebuilt/animations/charging_animation_06.png:system/semc/chargemon/data/charging_animation_06.png \
-    device/semc/anzu/prebuilt/animations/charging_animation_07.png:system/semc/chargemon/data/charging_animation_07.png \
-    device/semc/anzu/prebuilt/animations/charging_animation_blank.png:system/semc/chargemon/data/charging_animation_blank.png
-
-
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libril-qc-1.so \
     rild.libargs=-d/dev/smd0 \
@@ -126,9 +92,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.locale.language=en \
     ro.product.locale.region=US \
     BUILD_UTC_DATE=0
-
-# anzu uses high-density artwork where available
-PRODUCT_LOCALES += hdpi
-
-# we have enough storage space to hold precise GC data
-PRODUCT_TAGS += dalvik.gc.type-precise
