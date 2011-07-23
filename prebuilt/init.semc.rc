@@ -104,12 +104,12 @@ on boot
     chown system system /sys/devices/i2c-0/0-0038/rate
     chown system system /sys/devices/i2c-4/4-0038/rate
 
-    # insert SDIO-driver used by TI Wilink driver.
-    # This is _not_ the default SDIO driver included in the kernel.
-    insmod /system/lib/modules/sdio.ko
-
-    # Create the directories and files expected by the lcatp service
-    # only found in eng builds
+#    # insert SDIO-driver used by TI Wilink driver.
+#    # This is _not_ the default SDIO driver included in the kernel.
+#    insmod /system/lib/modules/sdio.ko
+#
+#    # Create the directories and files expected by the lcatp service
+#    # only found in eng builds
 
 on property:init.svc.bluetoothd=running
     write /sys/devices/virtual/bluetooth/hci0/link_supervision_timeout 6400

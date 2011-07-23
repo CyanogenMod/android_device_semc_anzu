@@ -10,6 +10,8 @@ WPA_SUPPLICANT_VERSION := VER_0_6_X
 WIFI_DRIVER_MODULE_PATH := /system/lib/modules/tiwlan_drv.ko
 WIFI_DRIVER_MODULE_NAME := tiwlan_drv
 WIFI_FIRMWARE_LOADER := wlan_loader
+WIFI_EXT_MODULE_PATH := /system/lib/modules/sdio.ko
+WIFI_EXT_MODULE_NAME := sdio
 
 HDMI_DUAL_DISPLAY := true
 
