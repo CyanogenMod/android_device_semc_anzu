@@ -10,33 +10,56 @@ echo 512   > $dev/btn_trig_hyst_freq    # Button Hysteresis Freq(Hz) default = 5
 echo 16  > $dev/btn_trig_hyst_time   # Button Hysteresis Time(Cycle) default = 16
 echo 500 > $dev/btn_trig_level  # default = 500
 
+#copy modules from kernel to correct place
+mount -o rw,remount -t yaffs2 /dev/block/mtdblock0 /system
+cp /modules/sdio.ko /system/lib/modules/sdio.ko
+cp /modules/tiwlan_drv.ko /system/lib/modules/tiwlan_drv.ko
+cp /modules/tiap_drv.ko /system/lib/modules/tiap_drv.ko
+mount -o ro,remount -t yaffs2 /dev/block/mtdblock0 /system
+
 # Proximity sensor configuration
-dev=/sys/bus/i2c/devices/0-0054/
+dev=/sys/bus/i2c/devices/0-0054
 hwid=`cat /sys/class/hwid/hwid`
 case $hwid in
-0x0a)
-echo  7 > $dev/nburst  # Number of pulses in burst. Valid range is 0 - 15.
-echo  3 > $dev/freq    # Burst frequency. Valid range is 0 - 3.
-;;
-*)
-echo  8 > $dev/nburst  # Number of pulses in burst. Valid range is 0 - 15.
-echo  2 > $dev/freq    # Burst frequency. Valid range is 0 - 3.
-;;
+ 0x0a)
+  val_cycle=2
+  val_nburst=7
+  val_freq=3
+  val_threshold=15
+  val_filter=0
+  ;;
+ *)
+  val_cycle=2
+  val_nburst=8
+  val_freq=2
+  val_threshold=15
+  val_filter=0
+  ;;
 esac
+
+nv_param_loader 60240 prox_cal
+val_calibrated=$?
+case $val_calibrated in
+ 1)
+  nv_param_loader 60240 threshold
+  val_threshold=$?
+  nv_param_loader 60240 rfilter
+  val_filter=$?
+  ;;
+esac
+
+echo $val_cycle > $dev/cycle    # Duration Cycle. Valid range is 0 - 3.
+echo $val_nburst > $dev/nburst  # Number of pulses in burst. Valid range is 0 - 15.
+echo $val_freq > $dev/freq      # Burst frequency. Valid range is 0 - 3.
+echo $val_threshold > $dev/threshold # sensor threshold. Valid range is 0 - 15 (0.12V - 0.87V)
+echo $val_filter > $dev/filter  # RFilter. Valid range is 0 - 3.
 
 # LMU AS3676 Configuration
 dev=/sys/devices/i2c-0/0-0040/leds
 echo 1,65,255,24,24,5,128 > $dev/lcd-backlight/als/curve  # ALS curve for group1
 echo 2,0,0,0 > $dev/lcd-backlight/als/params  #[gain],[filter_up],[filter_down],[offset]
 echo 1 > $dev/lcd-backlight/als/enable  #Sensor on/off. 1 = on, reg 90h
-echo 20000 > $dev/lcd-backlight/max_current
 echo 450 > $dev/button-backlight/max_current
-echo 1000 > $dev/red/max_current
-echo 1000 > $dev/green/max_current
-echo 1000 > $dev/blue/max_current
 
 # TI BQ275xx firmware loader
 bq275xx_fwloader
-
-rm -R /sdcard
-ln -l /mnt/sdcard /sdcard
