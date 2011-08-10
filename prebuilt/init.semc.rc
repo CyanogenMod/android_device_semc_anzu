@@ -161,9 +161,9 @@ service qmuxd /system/bin/qmuxd
 
 service akmd8975 /system/bin/akmd8975
 
-service hw_config /system/bin/sh /system/etc/hw_config.sh
-	user root
-	oneshot
+service hw_config /sbin/sh /system/etc/hw_config.sh
+    user root
+    oneshot
 
 service hdmid /system/bin/hdmid
     user  system
@@ -178,4 +178,3 @@ on boot
 
     chown system system /dev/i2c-0
     chown system system /dev/uio0
-

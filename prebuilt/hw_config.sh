@@ -10,6 +10,13 @@ echo 512   > $dev/btn_trig_hyst_freq    # Button Hysteresis Freq(Hz) default = 5
 echo 16  > $dev/btn_trig_hyst_time   # Button Hysteresis Time(Cycle) default = 16
 echo 500 > $dev/btn_trig_level  # default = 500
 
+#copy modules from kernel to correct place
+mount -o rw,remount -14mountt yaffs2 /dev/block/mtdblock0 /system
+cp /modules/sdio.ko /system/lib/modules/sdio.ko
+cp /modules/tiwlan_drv.ko /system/lib/modules/tiwlan_drvan_drv.ko
+cp /modules/tiap_drv.ko /system/lib/modules/tiap_drv.ko
+mount -o ro,remount -t yaffs2 /dev/block/mtdblock0 /system
+
 # Proximity sensor configuration
 dev=/sys/bus/i2c/devices/0-0054/
 hwid=`cat /sys/class/hwid/hwid`
