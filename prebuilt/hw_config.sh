@@ -12,6 +12,7 @@ echo 500 > $dev/btn_trig_level  # default = 500
 
 #copy modules from kernel to correct place
 mount -o rw,remount -t yaffs2 /dev/block/mtdblock0 /system
+mkdir -p /system/lib/modules/
 cp /modules/sdio.ko /system/lib/modules/sdio.ko
 cp /modules/tiwlan_drv.ko /system/lib/modules/tiwlan_drv.ko
 cp /modules/tiap_drv.ko /system/lib/modules/tiap_drv.ko
