@@ -54,6 +54,12 @@ adb pull /system/lib/libuim.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libril-qc-1.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libwms.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libwmsts.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libdsi_netctrl.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libdsutils.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libidl.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libnetmgr.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libqdp.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/bin/netmgrd ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 ## Camera proprietaries
 adb pull /system/lib/liboemcamera.so ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -66,8 +72,8 @@ adb pull /system/lib/libcald_pal.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libopencore_common.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 ## FIRMWARE
-adb pull /system/etc/firmware/bq27520_fw-0501_filever-0105_proj-hall_golden.bqfs ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/etc/firmware/bq27520_fw-0501_filever-0105_proj-hall_golden.dffs ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/etc/firmware/bq27520_fw-0501_filever-0107_proj-anzu_golden.bqfs ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/etc/firmware/bq27520_fw-0501_filever-0107_proj-anzu_golden.dffs ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/etc/firmware/fm_rx_init_1273.1.bts ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/etc/firmware/fm_rx_init_1273.2.bts ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/etc/firmware/fm_tx_init_1273.1.bts ../../../vendor/$VENDOR/$DEVICE/proprietary
