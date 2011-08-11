@@ -64,9 +64,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/semc/anzu/prebuilt/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     device/semc/anzu/prebuilt/hostapd.conf:system/etc/wifi/softap/hostapd.conf \
-    device/semc/anzu/modules/sdio.ko:root/modules/modules/sdio.ko \
+    device/semc/anzu/modules/sdio.ko:root/modules/sdio.ko \
     device/semc/anzu/modules/tiap_drv.ko:root/modules/tiap_drv.ko \
     device/semc/anzu/modules/tiwlan_drv.ko:root/modules/tiwlan_drv.ko
+
+# semc msm7x30 uses high-density artwork where available
+PRODUCT_LOCALES += hdpi
 
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libril-qc-1.so \
