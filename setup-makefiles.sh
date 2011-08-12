@@ -153,6 +153,13 @@ vendor/__VENDOR__/__DEVICE__/proprietary/libmiscta.so:system/lib/libmiscta.so
 PRODUCT_COPY_FILES += \\
 vendor/__VENDOR__/__DEVICE__/proprietary/gps.msm7x30.so:system/lib/hw/gps.semc.so
 
+#touch
+PRODUCT_COPY_FILES += \\
+vendor/__VENDOR__/__DEVICE__/proprietary/touch_anzu_sharp_type1.hex:system/etc/firmware/touch_anzu_sharp_type1.hex \\
+vendor/__VENDOR__/__DEVICE__/proprietary/touch_anzu_sharp_type2.hex:system/etc/firmware/touch_anzu_sharp_type2.hex \\
+vendor/__VENDOR__/__DEVICE__/proprietary/touch_anzu_sony_type1.hex:system/etc/firmware/touch_anzu_sony_type1.hex \\
+vendor/__VENDOR__/__DEVICE__/proprietary/touch_anzu_sony_type2.hex:system/etc/firmware/touch_anzu_sony_type2.hex 
+
 
 EOF
 

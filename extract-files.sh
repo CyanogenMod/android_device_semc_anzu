@@ -127,6 +127,11 @@ adb pull /system/lib/libmiscta.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 #Temporary GPS Fix untill we have 50001 gps
 adb pull /system/lib/hw/gps.msm7x30.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 
+#touch
+adb pull /system/etc/firmware/touch_anzu_sharp_type1.hex ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/etc/firmware/touch_anzu_sharp_type2.hex ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/etc/firmware/touch_anzu_sony_type1.hex ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/etc/firmware/touch_anzu_sony_type2.hex ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 ./setup-makefiles.sh
 
