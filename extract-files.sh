@@ -67,9 +67,20 @@ adb pull /system/lib/libmmjpeg.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libmmipl.so ../../../vendor/$VENDOR/$DEVICE/proprietary 
 adb pull /system/lib/libcamera.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcamera_clientsemc.so ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libcald_api.so ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libcald_pal.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libopencore_common.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libcald_api.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libcald_client.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libcald_debugger.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libcald_hal.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libcald_imageutil.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libcald_omxcamera.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libcald_omxcamera_plugin.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libcald_pal.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libcald_server.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libcameraextensionclient.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libcameraextensionjni.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libcameraextensionservice.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libcameralight.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 ## FIRMWARE
 adb pull /system/etc/firmware/bq27520_fw-0501_filever-0107_proj-anzu_golden.bqfs ../../../vendor/$VENDOR/$DEVICE/proprietary

@@ -86,11 +86,23 @@ vendor/__VENDOR__/__DEVICE__/proprietary/liboemcamera.so:system/lib/liboemcamera
 vendor/__VENDOR__/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libcamera.so:system/lib/libcamera.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libcamera_clientsemc.so:system/lib/libcamera_clientsemc.so \\
-vendor/__VENDOR__/__DEVICE__/proprietary/libcald_api.so:system/lib/libcald_api.so \\
-vendor/__VENDOR__/__DEVICE__/proprietary/libcald_pal.so:system/lib/libcald_pal.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libopencore_common.so:system/lib/libopencore_common.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \\
-vendor/__VENDOR__/__DEVICE__/proprietary/libmmipl.so:system/lib/libmmipl.so
+vendor/__VENDOR__/__DEVICE__/proprietary/libmmipl.so:system/lib/libmmipl.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libcald_api.so:system/lib/libcald_api.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libcald_client.so:system/lib/libcald_client.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libcald_debugger.so:system/lib/libcald_debugger.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libcald_hal.so:system/lib/libcald_hal.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libcald_imageutil.so:system/lib/libcald_imageutil.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libcald_omxcamera.so:system/lib/libcald_omxcamera.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libcald_omxcamera_plugin.so:system/lib/libcald_omxcamera_plugin.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libcald_pal.so:system/lib/libcald_pal.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libcald_server.so:system/lib/libcald_server.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libcameraextensionclient.so:system/lib/libcameraextensionclient.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libcameraextensionjni.so:system/lib/libcameraextensionjni.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libcameraextensionservice.so:system/lib/libcameraextensionservice.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libcameralight.so:system/lib/libcameralight.so
+
 
 ## FIRMWARE
 PRODUCT_COPY_FILES += \\
