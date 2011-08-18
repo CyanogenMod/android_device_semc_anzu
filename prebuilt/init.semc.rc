@@ -19,6 +19,8 @@ on boot
     chmod 0770 /data/misc/wifi/hostapd
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp system /data/misc/dhcp
+    # Copying hostapd.conf (WLAN HotSpot)
+    copy /system/etc/wifi/softap/hostapd.conf /data/misc/wifi/hostapd.conf
 
     # bluetooth power up/down interface
     mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
@@ -104,6 +106,9 @@ on boot
     chown system system /sys/devices/i2c-0/0-0038/rate
     chown system system /sys/devices/i2c-4/4-0038/rate
 
+    chmod 0666 /sys/devices/i2c-0/0-0054/nburst
+    chmod 0666 /sys/class/leds/lcd-backlight/als/enable
+
 #    # insert SDIO-driver used by TI Wilink driver.
 #    # This is _not_ the default SDIO driver included in the kernel.
 #    insmod /system/lib/modules/sdio.ko
@@ -118,7 +123,7 @@ service wlan_loader /system/bin/wlan_loader -i /etc/wifi/tiwlan.ini -f /etc/wifi
     disabled
     oneshot
 
-service wpa_supplicant /system/bin/wpa_supplicant -Dtiwlan0 -itiwlan0 -c/data/misc/wifi/wpa_supplicant.conf -dd
+service wpa_supplicant /system/bin/wpa_supplicant -Dtiwlan0 -itiwlan0 -c/data/misc/wifi/wpa_supplicant.conf
     socket wpa_tiwlan0 dgram 660 wifi wifi
     disabled
     oneshot
@@ -145,13 +150,9 @@ service wlan_ap_loader /system/bin/tiap_loader -i /system/etc/wifi/softap/tiwlan
     disabled
     oneshot
 
-service hostapd /system/bin/hostap /data/misc/wifi/hostapd/hostapd.conf
+service hostapd /system/bin/hostap /data/misc/wifi/hostapd.conf
     disabled
     oneshot
-
-#service ifcfg_tiap /system/bin/ifconfig tiap 192.168.43.1 netmask 255.255.255.0
-#    disabled
-#    oneshot
 
 service port-bridge /system/bin/port-bridge /dev/smd0 /dev/ttyGS0 &
     disabled
@@ -162,8 +163,8 @@ service qmuxd /system/bin/qmuxd
 service akmd8975 /system/bin/akmd8975
 
 service hw_config /sbin/sh /system/etc/hw_config.sh
-    user root
-    oneshot
+	user root
+	oneshot
 
 service hdmid /system/bin/hdmid
     user  system
@@ -185,3 +186,12 @@ service netmgrd /system/bin/netmgrd -E
 on property:ro.use_data_netmgrd=false
     # netmgr not supported on specific target
     stop netmgrd
+
+service nvcustomizer /system/bin/nvcustomizer
+    user root
+    oneshot
+
+# Copy calibration data from NV to kernel drivers
+service nvimport /system/bin/nvimport
+    user root
+    oneshot
