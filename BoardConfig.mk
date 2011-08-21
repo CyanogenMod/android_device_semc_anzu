@@ -15,8 +15,8 @@ WIFI_EXT_MODULE_NAME := sdio
 
 HDMI_DUAL_DISPLAY := true
 
-BOARD_HAS_NO_SELECT_BUTTON := true
-
 TARGET_OTA_ASSERT_DEVICE := LT15i,LT15a,anzu
+
+BOARD_CAMERA_USE_GETBUFFERINFO := true
 
 -include device/semc/msm7x30-common/Android.mk
