@@ -101,8 +101,9 @@ vendor/__VENDOR__/__DEVICE__/proprietary/libcald_server.so:system/lib/libcald_se
 vendor/__VENDOR__/__DEVICE__/proprietary/libcameraextensionclient.so:system/lib/libcameraextensionclient.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libcameraextensionjni.so:system/lib/libcameraextensionjni.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libcameraextensionservice.so:system/lib/libcameraextensionservice.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libface.so:system/lib/libface.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libgemini.so:system/lib/libgemini.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libcameralight.so:system/lib/libcameralight.so
-
 
 ## FIRMWARE
 PRODUCT_COPY_FILES += \\
@@ -135,18 +136,12 @@ vendor/__VENDOR__/__DEVICE__/proprietary/tiwlan_firmware.bin:system/etc/wifi/tiw
 vendor/__VENDOR__/__DEVICE__/proprietary/tiwlan_ap.ini:system/etc/wifi/softap/tiwlan_ap.ini \\
 vendor/__VENDOR__/__DEVICE__/proprietary/softap_firmware.bin:system/etc/wifi/softap/tiwlan_firmware_ap.bin 
 
-## Adreno 200 files
-PRODUCT_COPY_FILES += \\
-vendor/__VENDOR__/__DEVICE__/proprietary/libgsl.so:system/lib/libgsl.so \\
-vendor/__VENDOR__/__DEVICE__/proprietary/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \\
-vendor/__VENDOR__/__DEVICE__/proprietary/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \\
-vendor/__VENDOR__/__DEVICE__/proprietary/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \\
-vendor/__VENDOR__/__DEVICE__/proprietary/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so
 
 ## Other libraries and proprietary binaries
 PRODUCT_COPY_FILES += \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:obj/lib/libaudioalsa.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:system/lib/libaudioalsa.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libaudioeq.so:system/lib/libaudioeq.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/als_curve.conf:system/etc/als_curve.conf \\
 vendor/__VENDOR__/__DEVICE__/proprietary/vold.fstab:system/etc/vold.fstab \\
 vendor/__VENDOR__/__DEVICE__/proprietary/sensors.conf:system/etc/sensors.conf \\
