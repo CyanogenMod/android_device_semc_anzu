@@ -168,6 +168,14 @@ vendor/__VENDOR__/__DEVICE__/proprietary/touch_anzu_sharp_type2.hex:system/etc/f
 vendor/__VENDOR__/__DEVICE__/proprietary/touch_anzu_sony_type1.hex:system/etc/firmware/touch_anzu_sony_type1.hex \\
 vendor/__VENDOR__/__DEVICE__/proprietary/touch_anzu_sony_type2.hex:system/etc/firmware/touch_anzu_sony_type2.hex 
 
+## Adreno 200 files
+PRODUCT_COPY_FILES += \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libgsl.so:system/lib/libgsl.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so
+
 
 EOF
 
