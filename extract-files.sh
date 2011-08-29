@@ -51,6 +51,7 @@ adb pull /system/lib/libpbmlib.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libqmi.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libqueue.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libuim.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libreference-ril.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libril-qc-1.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libwms.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libwmsts.so ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -77,6 +78,8 @@ adb pull /system/lib/libcald_omxcamera.so ../../../vendor/$VENDOR/$DEVICE/propri
 adb pull /system/lib/libcald_omxcamera_plugin.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcald_pal.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcald_server.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libface.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libgemini.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcameraextensionclient.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcameraextensionjni.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcameraextensionservice.so ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -123,7 +126,7 @@ adb pull /system/lib/egl/libGLESv2_adreno200.so ../../../vendor/$VENDOR/$DEVICE/
 
 ## Other libraries and proprietary binaries
 adb pull /system/lib/libaudioalsa.so ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libaudioalsa.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libaudioeq.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/etc/als_curve.conf ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/etc/vold.fstab ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/etc/sensors.conf ../../../vendor/$VENDOR/$DEVICE/proprietary

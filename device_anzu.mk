@@ -22,9 +22,6 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
-PRODUCT_PACKAGES += \
-    hostap
-
 DISABLE_DEXPREOPT := false
 
 # These is the hardware-specific overlay, which points to the location
@@ -38,12 +35,12 @@ PRODUCT_COPY_FILES += \
 
 # Init files
 PRODUCT_COPY_FILES += \
-    device/semc/anzu/prebuilt/init.semc.rc:root/init.semc.rc \
-    device/semc/anzu/prebuilt/ueventd.mogami.rc:root/ueventd.mogami.rc \
+    device/semc/msm7x30-common/prebuilt/ueventd.mogami.rc:root/ueventd.mogami.rc \
+    device/semc/msm7x30-common/prebuilt/init.mogami.rc:root/init.semc.rc \
     device/semc/anzu/prebuilt/hw_config.sh:system/etc/hw_config.sh \
-    device/semc/anzu/prebuilt/logo.rle:root/logo.rle \
+    device/semc/msm7x30-common/prebuilt/logo_H.rle:root/logo.rle \
     device/semc/anzu/prebuilt/bootrec:root/sbin/bootrec \
-    device/semc/anzu/recovery.fstab:root/recovery.fstab 
+    device/semc/anzu/recovery.fstab:root/recovery.fstab
 
 #recovery resources
 PRODUCT_COPY_FILES += \
@@ -62,11 +59,12 @@ PRODUCT_COPY_FILES += \
 
 #WIFI modules and configs
 PRODUCT_COPY_FILES += \
-    device/semc/anzu/prebuilt/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/semc/anzu/prebuilt/hostapd.conf:system/etc/wifi/softap/hostapd.conf \
-    device/semc/anzu/modules/sdio.ko:root/modules/sdio.ko \
-    device/semc/anzu/modules/tiap_drv.ko:root/modules/tiap_drv.ko \
-    device/semc/anzu/modules/tiwlan_drv.ko:root/modules/tiwlan_drv.ko
+    device/semc/msm7x30-common/prebuilt/tiap_loader.sh:system/bin/tiap_loader.sh \
+    device/semc/msm7x30-common/prebuilt/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    device/semc/msm7x30-common/prebuilt/hostapd.conf:system/etc/wifi/softap/hostapd.conf \
+    device/semc/msm7x30-common/modules/sdio.ko:root/modules/sdio.ko \
+    device/semc/msm7x30-common/modules/tiap_drv.ko:root/modules/tiap_drv.ko \
+    device/semc/msm7x30-common/modules/tiwlan_drv.ko:root/modules/tiwlan_drv.ko
 
 # semc msm7x30 uses high-density artwork where available
 PRODUCT_LOCALES += hdpi
@@ -92,7 +90,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=tiwlan0 \
     wifi.supplicant_scan_interval=15 \
     ro.sf.lcd_density=240 \
-    ro.sf.hwrotation=180 \
     keyguard.no_require_sim=true \
     ro.com.google.locationfeatures=1 \
     dalvik.vm.dexopt-flags=m=y \
@@ -105,4 +102,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.compcache.default=0 \
     ro.product.locale.language=en \
     ro.product.locale.region=US \
+    persist.ro.ril.sms_sync_sending=1 \
+    ro.use_data_netmgrd=true \
+    wifi.hotspot.ti=1 \
     BUILD_UTC_DATE=0
