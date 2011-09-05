@@ -104,7 +104,17 @@ vendor/__VENDOR__/__DEVICE__/proprietary/libcameraextensionjni.so:system/lib/lib
 vendor/__VENDOR__/__DEVICE__/proprietary/libcameraextensionservice.so:system/lib/libcameraextensionservice.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libface.so:system/lib/libface.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libgemini.so:system/lib/libgemini.so \\
-vendor/__VENDOR__/__DEVICE__/proprietary/libcameralight.so:system/lib/libcameralight.so
+vendor/__VENDOR__/__DEVICE__/proprietary/libcameralight.so:system/lib/libcameralight.so \\
+vendor/__VENDOR__/__DEVICE__/proprietary/default_flash.dat:system/usr/semc/camera/default_flash.dat \\
+vendor/__VENDOR__/__DEVICE__/proprietary/LGI08BN0.dat:system/usr/semc/camera/LGI08BN0.dat \\
+vendor/__VENDOR__/__DEVICE__/proprietary/SOD08BN0.dat:system/usr/semc/camera/SOD08BN0.dat \\
+vendor/__VENDOR__/__DEVICE__/proprietary/SOD08BN0_DW9714.dat:system/usr/semc/camera/SOD08BN0_DW9714.dat \\
+vendor/__VENDOR__/__DEVICE__/proprietary/SOD08BN0_IMX073.dat:system/usr/semc/camera/SOD08BN0_IMX073.dat \\
+vendor/__VENDOR__/__DEVICE__/proprietary/SOD08BN1.dat:system/usr/semc/camera/SOD08BN1.dat \\
+vendor/__VENDOR__/__DEVICE__/proprietary/SOD08BN1_DW9714.dat:system/usr/semc/camera/SOD08BN1_DW9714.dat \\
+vendor/__VENDOR__/__DEVICE__/proprietary/SOD08BN1_IMX105.dat:system/usr/semc/camera/SOD08BN1_IMX105.dat
+
+
 
 ## FIRMWARE
 PRODUCT_COPY_FILES += \\
@@ -135,7 +145,8 @@ vendor/__VENDOR__/__DEVICE__/proprietary/init.qcom.bt.sh:system/etc/init.bt.sh \
 vendor/__VENDOR__/__DEVICE__/proprietary/tiwlan.ini:system/etc/wifi/tiwlan.ini \\
 vendor/__VENDOR__/__DEVICE__/proprietary/tiwlan_firmware.bin:system/etc/wifi/tiwlan_firmware.bin \\
 vendor/__VENDOR__/__DEVICE__/proprietary/tiwlan_ap.ini:system/etc/wifi/softap/tiwlan_ap.ini \\
-vendor/__VENDOR__/__DEVICE__/proprietary/softap_firmware.bin:system/etc/wifi/softap/tiwlan_firmware_ap.bin 
+vendor/__VENDOR__/__DEVICE__/proprietary/softap_firmware.bin:system/etc/wifi/softap/tiwlan_firmware_ap.bin \\
+vendor/__VENDOR__/__DEVICE__/proprietary/nvimport:system/bin/nvimport
 
 
 ## Other libraries and proprietary binaries

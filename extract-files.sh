@@ -84,6 +84,16 @@ adb pull /system/lib/libcameraextensionclient.so ../../../vendor/$VENDOR/$DEVICE
 adb pull /system/lib/libcameraextensionjni.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcameraextensionservice.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcameralight.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/usr/semc/camera/default_flash.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/usr/semc/camera/LGI08BN0.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/usr/semc/camera/SOD08BN0.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/usr/semc/camera/SOD08BN0_DW9714.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/usr/semc/camera/SOD08BN0_IMX073.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/usr/semc/camera/SOD08BN1.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/usr/semc/camera/SOD08BN1_DW9714.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/usr/semc/camera/SOD08BN1_IMX105.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
+
+
 
 ## FIRMWARE
 adb pull /system/etc/firmware/bq27520_fw-0501_filever-0107_proj-anzu_golden.bqfs ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -108,6 +118,7 @@ adb pull /system/etc/firmware/yamato_pm4.fw ../../../vendor/$VENDOR/$DEVICE/prop
 
 
 ## WIFI & BT TI1271
+adb pull /system/bin/nvimport ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/hciattach ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/etc/init.qcom.bt.sh ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/etc/tiwlan.ini ../../../vendor/$VENDOR/$DEVICE/proprietary
