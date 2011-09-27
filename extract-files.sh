@@ -158,5 +158,11 @@ adb pull /system/etc/firmware/touch_anzu_sharp_type2.hex ../../../vendor/$VENDOR
 adb pull /system/etc/firmware/touch_anzu_sony_type1.hex ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/etc/firmware/touch_anzu_sony_type2.hex ../../../vendor/$VENDOR/$DEVICE/proprietary
 
+#HDMI
+adb pull /system/app/SemcHdmiEnabler.apk
+adb pull /system/app/SemcHdmiControlSettings.apk
+adb pull /system/framework/com.sonyericsson.privateapis_impl.jar
+adb pull /system/etc/permissions/com.sonyericsson.privateapis.xml
+
 ./setup-makefiles.sh
 
