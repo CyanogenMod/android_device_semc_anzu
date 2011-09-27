@@ -40,6 +40,7 @@ DEVICE=anzu
 # Prebuilt kl keymaps
 PRODUCT_COPY_FILES += \\
 vendor/__VENDOR__/__DEVICE__/proprietary/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \\
+vendor/__VENDOR__/__DEVICE__/proprietary/qwerty.kcm.bin:system/usr/keychars/pm8058-keypad.kcm.bin \\
 vendor/__VENDOR__/__DEVICE__/proprietary/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \\
 vendor/__VENDOR__/__DEVICE__/proprietary/atdaemon.kl:system/usr/keylayout/atdaemon.kl \\
 vendor/__VENDOR__/__DEVICE__/proprietary/AVRCP.kl:system/usr/keylayout/AVRCP.kl \\
@@ -187,6 +188,11 @@ vendor/__VENDOR__/__DEVICE__/proprietary/libq3dtools_adreno200.so:system/lib/egl
 vendor/__VENDOR__/__DEVICE__/proprietary/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so
 
+#HDMI
+vendor/__VENDOR__/__DEVICE__/proprietary/SemcHdmiEnabler.apk:system/app/SemcHdmiEnabler.apk
+vendor/__VENDOR__/__DEVICE__/proprietary/SemcHdmiControlSettings.apk:system/app/SemcHdmiControlSettings.apk
+vendor/__VENDOR__/__DEVICE__/proprietary/com.sonyericsson.privateapis_impl.jar:system/framework/com.sonyericsson.privateapis_impl.jar
+vendor/__VENDOR__/__DEVICE__/proprietary/com.sonyericsson.privateapis.xml:system/etc.permissions/com.sonyericsson.privateapis.xml
 
 EOF
 
