@@ -164,5 +164,11 @@ adb pull /system/app/SemcHdmiControlSettings.apk
 adb pull /system/framework/com.sonyericsson.privateapis_impl.jar
 adb pull /system/etc/permissions/com.sonyericsson.privateapis.xml
 
+#ANT*
+adb pull /system/app/AntHalService.apk ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/etc/permissions/com.dsi.ant.antradio_library.xml ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/framework/com.dsi.ant.antradio_library.jar ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libanthal.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+
 ./setup-makefiles.sh
 

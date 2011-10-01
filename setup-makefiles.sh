@@ -189,10 +189,18 @@ vendor/__VENDOR__/__DEVICE__/proprietary/libEGL_adreno200.so:system/lib/egl/libE
 vendor/__VENDOR__/__DEVICE__/proprietary/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so
 
 #HDMI
-vendor/__VENDOR__/__DEVICE__/proprietary/SemcHdmiEnabler.apk:system/app/SemcHdmiEnabler.apk
-vendor/__VENDOR__/__DEVICE__/proprietary/SemcHdmiControlSettings.apk:system/app/SemcHdmiControlSettings.apk
-vendor/__VENDOR__/__DEVICE__/proprietary/com.sonyericsson.privateapis_impl.jar:system/framework/com.sonyericsson.privateapis_impl.jar
+PRODUCT_COPY_FILES += \\
+vendor/__VENDOR__/__DEVICE__/proprietary/SemcHdmiEnabler.apk:system/app/SemcHdmiEnabler.apk \\
+vendor/__VENDOR__/__DEVICE__/proprietary/SemcHdmiControlService.apk:system/app/SemcHdmiControlService.apk \\
+vendor/__VENDOR__/__DEVICE__/proprietary/com.sonyericsson.privateapis_impl.jar:system/framework/com.sonyericsson.privateapis_impl.jar \\
 vendor/__VENDOR__/__DEVICE__/proprietary/com.sonyericsson.privateapis.xml:system/etc.permissions/com.sonyericsson.privateapis.xml
+
+#ANT*
+PRODUCT_COPY_FILES += \\
+vendor/__VENDOR__/__DEVICE__/proprietary/AntHalService.apk:system/app/AntHalService.apk \\
+vendor/__VENDOR__/__DEVICE__/proprietary/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml \\
+vendor/__VENDOR__/__DEVICE__/proprietary/com.dsi.ant.antradio_library.jar:system/framework/com.dsi.ant.antradio_library.jar \\
+vendor/__VENDOR__/__DEVICE__/proprietary/libanthal.so:system/lib/libanthal.so
 
 EOF
 
