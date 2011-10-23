@@ -21,7 +21,7 @@ rm -r ../../../vendor/$VENDOR/$DEVICE
 mkdir -p ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 # Prebuilt kl keymaps
-adb pull /system/usr/keychars/qwerty.kcm.bin ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/usr/keychars/us104-keyboard.kcm.bin ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/usr/keychars/qwerty.kcm.bin ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/usr/keychars/qwerty2.kcm.bin ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/usr/keylayout/atdaemon.kl ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -30,6 +30,8 @@ adb pull /system/usr/keylayout/msm_pmic_pwr_key.kl ../../../vendor/$VENDOR/$DEVI
 adb pull /system/usr/keylayout/pm8058-keypad.kl ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/usr/keylayout/qwerty.kl ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/usr/keylayout/simple_remote.kl ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/usr/keylayout/us104-keyboard.kl ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/usr/keylayout/usb_mouse.kl ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 ## RIL related stuff 
 adb pull /system/lib/libril.so ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -68,14 +70,10 @@ adb pull /system/lib/libmmjpeg.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libmmipl.so ../../../vendor/$VENDOR/$DEVICE/proprietary 
 adb pull /system/lib/libcamera.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcamera_clientsemc.so ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libopencore_common.so ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libcald_api.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcald_client.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcald_debugger.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcald_hal.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcald_imageutil.so ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libcald_omxcamera.so ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libcald_omxcamera_plugin.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcald_pal.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcald_server.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libface.so ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -84,8 +82,13 @@ adb pull /system/lib/libcameraextensionclient.so ../../../vendor/$VENDOR/$DEVICE
 adb pull /system/lib/libcameraextensionjni.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcameraextensionservice.so ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcameralight.so ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/usr/semc/camera/default_flash.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/usr/semc/camera/LGI08BN0.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/usr/semc/camera/LGI08BN0_DW9714.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/usr/semc/camera/LGI08BN0_IMX105.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/usr/semc/camera/LGI08BN1.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/usr/semc/camera/LGI08BN1_DW9714.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/usr/semc/camera/LGI08BN1_IMX105.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/usr/semc/camera/LM3560_04_flash.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/usr/semc/camera/SOD08BN0.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/usr/semc/camera/SOD08BN0_DW9714.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/usr/semc/camera/SOD08BN0_IMX073.dat ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -96,8 +99,7 @@ adb pull /system/usr/semc/camera/SOD08BN1_IMX105.dat ../../../vendor/$VENDOR/$DE
 
 
 ## FIRMWARE
-adb pull /system/etc/firmware/bq27520_fw-0501_filever-0107_proj-anzu_golden.bqfs ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/etc/firmware/bq27520_fw-0501_filever-0107_proj-anzu_golden.dffs ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/etc/firmware/bq27520_fw-0507_filever-0112_proj-anzu_golden.bqfs ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/etc/firmware/fm_rx_init_1273.1.bts ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/etc/firmware/fm_rx_init_1273.2.bts ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/etc/firmware/fm_tx_init_1273.1.bts ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -159,10 +161,11 @@ adb pull /system/etc/firmware/touch_anzu_sony_type1.hex ../../../vendor/$VENDOR/
 adb pull /system/etc/firmware/touch_anzu_sony_type2.hex ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 #HDMI
-adb pull /system/app/SemcHdmiEnabler.apk
-adb pull /system/app/SemcHdmiControlSettings.apk
-adb pull /system/framework/com.sonyericsson.privateapis_impl.jar
-adb pull /system/etc/permissions/com.sonyericsson.privateapis.xml
+adb pull /system/bin/hdmid ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/libhdmidisplay.so ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/app/SemcHdmiControlService.apk ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/framework/com.sonyericsson.privateapis_impl.jar ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/etc/permissions/com.sonyericsson.privateapis.xml ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 #ANT*
 adb pull /system/app/AntHalService.apk ../../../vendor/$VENDOR/$DEVICE/proprietary
