@@ -7,9 +7,9 @@ $(call inherit-product-if-exists, vendor/semc/anzu/anzu-vendor.mk)
 
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := Xperia Arc
+PRODUCT_NAME := anzu
 PRODUCT_DEVICE := anzu
-PRODUCT_MODEL := LT18i
+PRODUCT_MODEL := anzu
 
 -include device/semc/mogami-common/mogami.mk
 
