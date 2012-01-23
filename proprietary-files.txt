@@ -29,7 +29,6 @@ lib/libpbmlib.so
 lib/libqmi.so
 lib/libqueue.so
 lib/libuim.so
-lib/libreference-ril.so
 lib/libril-qc-1.so
 lib/libwms.so
 lib/libwmsts.so

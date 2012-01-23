@@ -11,23 +11,23 @@ echo 16  > $dev/btn_trig_hyst_time   # Button Hysteresis Time(Cycle) default = 1
 echo 500 > $dev/btn_trig_level  # default = 500
 
 # Proximity sensor configuration
-dev=/sys/bus/i2c/devices/0-0054
+dev=/sys/bus/i2c/devices/0-0054/
 hwid=`cat /sys/class/hwid/hwid`
 case $hwid in
- 0x0a)
+0x0a)
   val_cycle=2
   val_nburst=7
   val_freq=3
   val_threshold=15
   val_filter=0
-  ;;
- *)
+;;
+*)
   val_cycle=2
   val_nburst=8
   val_freq=2
   val_threshold=15
   val_filter=0
-  ;;
+;;
 esac
 
 nv_param_loader 60240 prox_cal
