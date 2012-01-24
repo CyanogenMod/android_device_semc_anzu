@@ -22,24 +22,23 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
-DISABLE_DEXPREOPT := false
-
 # These is the hardware-specific overlay, which points to the location
 # of hardware-specific resource overrides, typically the frameworks and
 # application settings that are stored in resourced.
 DEVICE_PACKAGE_OVERLAYS += device/semc/anzu/overlay
 
 # These are the hardware-specific configuration files
-#PRODUCT_COPY_FILES += \
-#	device/semc/anzu/prebuilt/media_profiles.xml:system/etc/media_profiles.xml
+PRODUCT_COPY_FILES += \
+    device/semc/anzu/prebuilt/media_profiles.xml:system/etc/media_profiles.xml
 
 # Init files
 PRODUCT_COPY_FILES += \
-    device/semc/anzu/prebuilt/bootrec:root/sbin/bootrec \
-    device/semc/anzu/prebuilt/hw_config.sh:system/etc/hw_config.sh \
     device/semc/anzu/prebuilt/pre_hw_config.sh:root/pre_hw_config.sh \
+    device/semc/anzu/prebuilt/hw_config.sh:system/etc/hw_config.sh \
     device/semc/msm7x30-common/prebuilt/logo_H.rle:root/logo.rle \
+    device/semc/anzu/prebuilt/bootrec:root/sbin/bootrec \
     device/semc/anzu/recovery.fstab:root/recovery.fstab
+#    device/semc/anzu/prebuilt/filler:root/sbin/filler \
 
 
 # semc msm7x30 uses high-density artwork where available
@@ -54,7 +53,6 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x30-common/prebuilt/animations/charging_animation_05_H.png:system/semc/chargemon/data/charging_animation_05.png \
     device/semc/msm7x30-common/prebuilt/animations/charging_animation_06_H.png:system/semc/chargemon/data/charging_animation_06.png \
     device/semc/msm7x30-common/prebuilt/animations/charging_animation_07_H.png:system/semc/chargemon/data/charging_animation_07.png
-#    device/semc/msm7x30-common/prebuilt/animations/charging_animation_blank_H.png:system/semc/chargemon/data/charging_animation_blank.png
 
 #LCD DENSITY
 PRODUCT_PROPERTY_OVERRIDES += \

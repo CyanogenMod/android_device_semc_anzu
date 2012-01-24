@@ -1,6 +1,14 @@
 -include device/semc/mogami-common/BoardConfigCommon.mk
 -include vendor/semc/anzu/BoardConfigVendor.mk
 
+
+SENSORS_ACCEL_BMA150_INPUT := yes
+#SENSORS_ACCEL_BMA250_INPUT := yes
+#SENSORS_ACCEL_BMA250NA_INPUT := yes
+SENSORS_COMPASS_AK897X := yes
+SENSORS_PROXIMITY_APDS970X := yes
+#SENSORS_PRESSURE_BMP180 := yes
+
 BOARD_FLASH_BLOCK_SIZE := 2048
 
 TARGET_OTA_ASSERT_DEVICE := LT18i,LT18a,LT15i,LT15a,anzu
