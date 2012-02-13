@@ -11,15 +11,9 @@ PRODUCT_NAME := anzu
 PRODUCT_DEVICE := anzu
 PRODUCT_MODEL := anzu
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := $(LOCAL_PATH)/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
 PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
-
+    $(TARGET_PREBUILT_KERNEL):kernel
 
 -include device/semc/mogami-common/mogami.mk
 
@@ -37,8 +31,8 @@ PRODUCT_COPY_FILES += \
     device/semc/anzu/prebuilt/pre_hw_config.sh:root/pre_hw_config.sh \
     device/semc/anzu/prebuilt/hw_config.sh:system/etc/hw_config.sh \
     device/semc/msm7x30-common/prebuilt/logo_H.rle:root/logo.rle \
-    device/semc/anzu/prebuilt/filler:root/sbin/filler \
     device/semc/anzu/prebuilt/bootrec:root/sbin/bootrec \
+    device/semc/anzu/prebuilt/filler:root/sbin/filler \
     device/semc/anzu/recovery.fstab:root/recovery.fstab
 
 
