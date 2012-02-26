@@ -44,29 +44,6 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x30-common/prebuilt/animations/charging_animation_07_H.png:system/semc/chargemon/data/charging_animation_07.png
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/system/lib/libril-qc-1.so \
-    rild.libargs=-d/dev/smd0 \
-    ro.ril.hsxpa=1 \
-    ro.ril.gprsclass=10 \
-    ro.telephony.default_network=0 \
-    ro.telephony.call_ring.multiple=false \
-    ro.telephony.ril_class=semc \
     wifi.interface=tiwlan0 \
-    wifi.supplicant_scan_interval=15 \
     ro.sf.lcd_density=240 \
-    keyguard.no_require_sim=true \
-    ro.com.google.locationfeatures=1 \
-    dalvik.vm.dexopt-flags=m=y \
-    dalvik.vm.heapsize=48m \
-    dalvik.vm.dexopt-data-only=1 \
-    dalvik.vm.lockprof.threshold=500 \
-    dalvik.vm.execution-mode=int:jit \
-    dalvik.vm.checkjni=false \
-    ro.opengles.version=131072  \
-    ro.compcache.default=0 \
-    ro.product.locale.language=en \
-    ro.product.locale.region=US \
-    persist.ro.ril.sms_sync_sending=1 \
-    ro.use_data_netmgrd=true \
-    wifi.hotspot.ti=1 \
-    BUILD_UTC_DATE=0
+    wifi.hotspot.ti=1
