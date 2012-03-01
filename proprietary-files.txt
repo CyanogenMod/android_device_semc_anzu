@@ -116,7 +116,6 @@ lib/libaudioalsa.so
 etc/als_curve.conf
 etc/vold.fstab
 etc/sensors.conf
-lib/hw/sensors.default.so
 bin/bq275xx_fwloader
 bin/hdmid
 bin/akmd8975
