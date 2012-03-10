@@ -32,7 +32,7 @@ PRODUCT_COPY_FILES += \
     device/semc/anzu/prebuilt/pre_hw_config.sh:root/pre_hw_config.sh \
     device/semc/anzu/prebuilt/hw_config.sh:system/etc/hw_config.sh \
     device/semc/msm7x30-common/prebuilt/logo_H.rle:root/logo.rle \
-    device/semc/anzu/prebuilt/bootrec:root/sbin/bootrec \
+    device/semc/anzu/prebuilt/bootrec-device:root/sbin/bootrec-device \
     device/semc/anzu/recovery.fstab:root/recovery.fstab
 
 # semc msm7x30 uses high-density artwork where available
