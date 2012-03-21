@@ -29,7 +29,6 @@ lib/libpbmlib.so
 lib/libqmi.so
 lib/libqueue.so
 lib/libuim.so
-lib/libreference-ril.so
 lib/libril-qc-1.so
 lib/libwms.so
 lib/libwmsts.so
@@ -97,7 +96,6 @@ etc/firmware/yamato_pm4.fw
 
 ## WIFI & BT TI1271
 bin/nvimport
-bin/hciattach
 etc/init.qcom.bt.sh
 etc/wifi/tiwlan.ini
 etc/wifi/tiwlan_firmware.bin
