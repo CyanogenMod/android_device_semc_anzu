@@ -42,4 +42,5 @@ PRODUCT_LOCALES += hdpi
 
 #LCD DENSITY
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=240
+    ro.sf.lcd_density=240 \
+    com.qc.hdmi_out=false
