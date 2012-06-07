@@ -116,3 +116,13 @@ etc/firmware/touch_anzu_sharp_type1.hex
 etc/firmware/touch_anzu_sharp_type2.hex
 etc/firmware/touch_anzu_sony_type1.hex
 etc/firmware/touch_anzu_sony_type2.hex
+
+#ANT+
+lib/libanthal.so
+etc/permissions/com.dsi.ant.antradio_library.xml
+etc/permissions/com.sonyericsson.suquashi.xml
+app/antstatenotifer.apk
+app/AntHalService.apk
+app/antradioservice.apk
+framework/com.dsi.ant.antradio_library.jar
+framework/com.sonyericsson.suquashi.jar
