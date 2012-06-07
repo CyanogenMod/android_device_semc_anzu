@@ -134,8 +134,12 @@ app/SemcHdmiControlService.apk
 framework/com.sonyericsson.privateapis_impl.jar
 etc/permissions/com.sonyericsson.privateapis.xml
 
-#ANT*
-app/AntHalService.apk
-etc/permissions/com.dsi.ant.antradio_library.xml
-framework/com.dsi.ant.antradio_library.jar
+#ANT+
 lib/libanthal.so
+etc/permissions/com.dsi.ant.antradio_library.xml
+etc/permissions/com.sonyericsson.suquashi.xml
+app/antstatenotifer.apk
+app/AntHalService.apk
+app/antradioservice.apk
+framework/com.dsi.ant.antradio_library.jar
+framework/com.sonyericsson.suquashi.jar
