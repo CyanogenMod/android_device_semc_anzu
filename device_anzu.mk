@@ -11,10 +11,6 @@ PRODUCT_NAME := anzu
 PRODUCT_DEVICE := anzu
 PRODUCT_MODEL := anzu
 
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
-PRODUCT_COPY_FILES += \
-    $(TARGET_PREBUILT_KERNEL):kernel
-
 -include device/semc/mogami-common/mogami.mk
 
 # These is the hardware-specific overlay, which points to the location
