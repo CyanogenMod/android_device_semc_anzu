@@ -115,7 +115,6 @@ etc/als_curve.conf
 etc/vold.fstab
 etc/sensors.conf
 bin/bq275xx_fwloader
-bin/hdmid
 bin/akmd8975
 bin/touchd
 bin/chargemon
@@ -126,13 +125,6 @@ etc/firmware/touch_anzu_sharp_type1.hex
 etc/firmware/touch_anzu_sharp_type2.hex
 etc/firmware/touch_anzu_sony_type1.hex
 etc/firmware/touch_anzu_sony_type2.hex
-
-#HDMI
-bin/hdmid
-lib/libhdmidisplay.so
-app/SemcHdmiControlService.apk
-framework/com.sonyericsson.privateapis_impl.jar
-etc/permissions/com.sonyericsson.privateapis.xml
 
 #ANT+
 lib/libanthal.so
