@@ -1,3 +1,4 @@
+-include device/semc/msm7x30-common/BoardConfigCommon.mk
 -include device/semc/mogami-common/BoardConfigCommon.mk
 -include vendor/semc/anzu/BoardConfigVendor.mk
 
@@ -14,6 +15,5 @@ SENSORS_PRESSURE_BMP180 := false
 TARGET_QCOM_HDMI_OUT := false
 
 BOARD_FLASH_BLOCK_SIZE := 2048
-
 
 TARGET_OTA_ASSERT_DEVICE := LT18i,LT18a,LT15i,LT15a,anzu
