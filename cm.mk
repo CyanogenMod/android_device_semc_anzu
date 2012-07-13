@@ -1,7 +1,7 @@
 # Inherit device configuration
 $(call inherit-product, device/semc/anzu/full_anzu.mk)
 
-## Specify phone tech before including full_phone
+# Specify phone tech before including full_phone
 $(call inherit-product, vendor/cm/config/gsm.mk)
 
 # Inherit some common CM stuff.
