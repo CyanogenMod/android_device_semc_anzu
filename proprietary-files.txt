@@ -117,7 +117,6 @@ bin/bq275xx_fwloader
 bin/akmd8975
 bin/chargemon
 lib/libmiscta.so
-lib/libv8.so
 
 #touch
 etc/firmware/touch_anzu_sharp_type1.hex
