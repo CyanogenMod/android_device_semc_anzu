@@ -10,10 +10,6 @@ $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 PRODUCT_AAPT_CONFIG := normal hdpi hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-# These are the hardware-specific configuration files
-PRODUCT_COPY_FILES += \
-    device/semc/anzu/prebuilt/media_profiles.xml:system/etc/media_profiles.xml
-
 # Init files
 PRODUCT_COPY_FILES += \
     device/semc/anzu/prebuilt/init.semc.usb.rc:root/init.semc.usb.rc \
