@@ -1,5 +1,4 @@
 -include device/semc/mogami-common/BoardConfigCommon.mk
--include vendor/semc/anzu/BoardConfigVendor.mk
 
 TARGET_KERNEL_SOURCE := kernel/semc/msm7x30
 TARGET_KERNEL_CONFIG := cyanogen_anzu_defconfig

@@ -1,34 +1,4 @@
-## RIL related stuff
-lib/libril.so
-bin/port-bridge
-bin/qmuxd
-lib/libauth.so
-lib/libcm.so
-lib/libdiag.so
-lib/libdll.so
-lib/libdsm.so
-lib/libdss.so
-lib/libgsdi_exp.so
-lib/libgstk_exp.so
-lib/libmmgsdilib.so
-lib/libnv.so
-lib/liboem_rapi.so
-lib/liboncrpc.so
-lib/libpbmlib.so
-lib/libqmi.so
-lib/libqueue.so
-lib/libuim.so
-lib/libril-qc-1.so
-lib/libwms.so
-lib/libwmsts.so
-lib/libdsi_netctrl.so
-lib/libdsutils.so
-lib/libidl.so
-lib/libnetmgr.so
-lib/libqdp.so
-bin/netmgrd
-
-## Camera proprietaries
+# Camera
 lib/hw/camera.semc.so
 lib/liboemcamera.so
 lib/libmmjpeg.so
@@ -60,65 +30,14 @@ usr/semc/camera/SOD08BN1.dat
 usr/semc/camera/SOD08BN1_DW9714.dat
 usr/semc/camera/SOD08BN1_IMX105.dat
 
-
-## FIRMWARE
+# Firmware
 etc/firmware/bq27520_fw-0507_filever-0112_proj-anzu_golden.bqfs
-etc/firmware/fm_rx_init_1273.1.bts
-etc/firmware/fm_rx_init_1273.2.bts
-etc/firmware/fm_tx_init_1273.1.bts
-etc/firmware/fm_tx_init_1273.2.bts
-etc/firmware/fmc_init_1273.1.bts
-etc/firmware/fmc_init_1273.2.bts
-etc/firmware/TIInit_7.5.20.bts
-etc/firmware/TIInit_7.6.15.bts
-etc/firmware/vidc_720p_command_control.fw
-etc/firmware/vidc_720p_h263_dec_mc.fw
-etc/firmware/vidc_720p_h264_dec_mc.fw
-etc/firmware/vidc_720p_h264_enc_mc.fw
-etc/firmware/vidc_720p_mp4_dec_mc.fw
-etc/firmware/vidc_720p_mp4_enc_mc.fw
-etc/firmware/vidc_720p_vc1_dec_mc.fw
-etc/firmware/yamato_pfp.fw
-etc/firmware/yamato_pm4.fw
 
-## WIFI & BT TI1271
-bin/nvimport
-bin/calibrator
-lib/libnl.so
-etc/firmware/wl1271-fw-multirole-roc.bin
-
-## Adreno 200 files
-lib/libC2D2.so
-lib/libOpenVG.so
-lib/libgsl.so
-lib/libsc-a2xx.so
-lib/libc2d2_z180.so
-lib/egl/eglsubAndroid.so
-lib/egl/libGLESv1_CM_adreno200.so
-lib/egl/libq3dtools_adreno200.so
-lib/egl/libEGL_adreno200.so
-lib/egl/libGLESv2_adreno200.so
-lib/egl/libGLESv2S3D_adreno200.so
-
-## Other libraries and proprietary binaries
-lib/libaudioalsa.so
-bin/bq275xx_fwloader
+# Accelerometer
 bin/akmd8975
-bin/chargemon
-lib/libmiscta.so
 
-#touch
+# Touchscreen
 etc/firmware/touch_anzu_sharp_type1.hex
 etc/firmware/touch_anzu_sharp_type2.hex
 etc/firmware/touch_anzu_sony_type1.hex
 etc/firmware/touch_anzu_sony_type2.hex
-
-#ANT+
-lib/libanthal.so
-etc/permissions/com.dsi.ant.antradio_library.xml
-etc/permissions/com.sonyericsson.suquashi.xml
-app/antstatenotifer.apk
-app/AntHalService.apk
-app/antradioservice.apk
-framework/com.dsi.ant.antradio_library.jar
-framework/com.sonyericsson.suquashi.jar
