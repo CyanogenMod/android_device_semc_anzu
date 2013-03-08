@@ -35,7 +35,7 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, device/semc/msm7x30-common/prebuilt/resources-hdpi.mk)
 
-#LCD DENSITY
+# Device properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
     com.qc.hdmi_out=false
