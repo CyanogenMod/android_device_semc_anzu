@@ -9,7 +9,7 @@
   },
   {
     "repository": "android_hardware_sony_DASH",
-    "target_path": "hardware/somc/dash"
+    "target_path": "hardware/sony/DASH"
   },
   {
     "repository": "android_hardware_ti_fmradio",
